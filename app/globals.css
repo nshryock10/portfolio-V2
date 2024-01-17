@@ -7,7 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --gold: #ffea85;
-  --gold2:rgb(255, 186, 88)5;
+  --gold2:rgb(255, 186, 88);
   --dark-gray: #919191;
 }
 
@@ -18,7 +18,7 @@
     --background-end-rgb: 255, 253, 253;
   }
 }
-
+/*
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -27,4 +27,4 @@ body {
       rgb(var(--gold2))
     )
     rgb(var(--background-start-rgb));
-}
+} */

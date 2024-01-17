@@ -14,7 +14,7 @@ export default function
     const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div  className='absolute z-50 top-0 '>
+    <div  className='absolute z-50 top-0 h-screen'>
         <button onClick={() => setIsOpen(!isOpen)} className='h-[20px] flex flex-col justify-around absolute z-10 top-10 left-10
         md:hidden' > 
             <div className={`px-[17px] py-[1.5px] rounded-md bg-black rotate-0 transition-transform
