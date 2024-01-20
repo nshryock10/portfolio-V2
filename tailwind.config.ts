@@ -13,100 +13,126 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens: {
+        'lg': '1200px',
+      },
       animation: {
-        'text-slide': 'text-slide 8s infinite',
-        'text-slide2': 'text-slide2 8s  infinite',
-        'text-slide3': 'text-slide3 8s  infinite',
+        'text-slide': 'text-slide 10s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+        'text-slide2': 'text-slide2 10s cubic-bezier(0.83, 0, 0.17, 1)  infinite',
+        'text-slide3': 'text-slide3 10s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+        'expander': 'transition-all 3s'
       },
       keyframes: {
         'text-slide': {
           '0%': {
-            transform: 'translateX(-200%)',
-            animationDelay: '0s',
+            transform: 'translateX(-500px)',
+            opacity: '0',
+            scale: '0.5'
+
           },
           '16.6%': {
-            transform: 'translateX(-199%)',
-            animationDelay: '5s',
+            transform: 'translateX(-490px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '33.3%': {
-            transform: 'translateX(-198%)',
-            animationDelay: '5s',
+            transform: 'translateX(-489px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '49.8%': {
-            transform: 'translateX(-197%)',
-            animationDelay: '0s',
+            transform: 'translateX(-488px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '66.4%': {
-            transform: 'translateX(-196%)',
-            animationDelay: '0s',
+            transform: 'translateX(-487px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '83%': {
             transform: 'translateX(0)',
-            animationDelay: '0s',
+            opacity: '1',
+            scale: '1'
           },
           '100%': {
-            transform: 'translateX(250%)',
-            animationDelay: '0s',
+            transform: 'translateX(500px)',
+            opacity: '0',
+            scale: '1'
           },
         },
         'text-slide2': {
           '0%': {
-            transform: 'translateY(700px) rotate(-90deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-700px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '16.6%': {
-            transform: 'translateY(650px) rotate(-90deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-650px)',
+            opacity: '0',
+            scale: '0.5'
           },
           '33.3%': {
-            transform: 'translateY(649px) rotate(-90deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-649px) ',
+            opacity: '0',
+            scale: '0.5'
           },
           '49.8%': {
-            transform: 'translateY(0px) rotate(-90deg)',
-            animationDelay: '10s',
+            transform: 'translateX(0px) ',
+            opacity: '1',
+            scale: '1'
           },
           '66.4%': {
-            transform: 'translateY(-500px) rotate(-90deg)',
-            animationDelay: '10s',
+            transform: 'translateX(500px) ',
+            opacity: '0',
+            scale: '1'
           },
           '83%': {
-            transform: 'translateY(-505px) rotate(-90deg)',
-            animationDelay: '10s',
+            transform: 'translateX(505px) ',
+            opacity: '0',
+            scale: '1'
           },
           '100%': {
-            transform: 'translateY(-600px) rotate(-90deg)',
-            animationDelay: '0s',
+            transform: 'translateX(600px) ',
+            opacity: '0',
+            scale: '1'
           }
         },
         'text-slide3': {
           '0%': {
-            transform: 'translateX(150%) rotate(180deg)',
-            animationDelay: '0s',
+            transform: 'translateX(500px) rotate(180deg)',
+            opacity: '0',
+            scale: '0.5'
           },
           '16.6%': {
             transform: 'translateX(0) rotate(180deg)',
-            animationDelay: '0s',
+            opacity: '1',
+            scale: '1'
           },
           '33.3%': {
-            transform: 'translateX(-150%) rotate(180deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-500px) rotate(180deg)',
+            opacity: '0',
+            scale: '1'
           },
           '49.8%': {
-            transform: 'translateX(-151%) rotate(180deg)',
-            animationDelay: '10s',
+            transform: 'translateX(-501px) rotate(180deg)',
+            opacity: '0',
+            scale: '1'
           },
           '66.4%': {
-            transform: 'translateX(-200%) rotate(180deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-505px) rotate(180deg)',
+            opacity: '0',
+            scale: '1'
           },
           '83%': {
-            transform: 'translateX(-220%) rotate(180deg)',
-            animationDelay: '0s',
+            transform: 'translateX(-510px) rotate(180deg)',
+            opacity: '0',
+            scale: '1'
           },
           '100%': {
             transform: 'translateX(-250%) rotate(180deg)',
-            animationDelay: '0s',
+            opacity: '0',
+            scale: '1'
           }
         },
       },

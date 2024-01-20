@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
+    "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "react-social-icons": "^6.9.0"
   },
   "devDependencies": {
     "@types/node": "^20",

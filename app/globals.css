@@ -9,6 +9,12 @@
   --gold: #ffea85;
   --gold2:rgb(255, 186, 88);
   --dark-gray: #919191;
+
+  /* Component widths */
+  --md-nav-width: 150px;
+  --lg-nav-width: 400px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {

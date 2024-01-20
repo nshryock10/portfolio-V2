@@ -1,47 +1,63 @@
 "use client"
 
-import React from 'react'
-import { useTypewriter } from 'react-simple-typewriter'
+import React, { useEffect, useState } from 'react'
 
 type Props = {}
 
 function   Hero({}: Props) {
 
-    const [text1, count1] = useTypewriter({
-        words: ['Enthusiastic Developer'],
-        loop: true,
-        delaySpeed: 4000,
-    })
+    useEffect(() => {
+        const text1 = document.getElementById('text1');
+        const text1P = document.getElementById('text1P');
+        const text2 = document.getElementById('text2');
+        const text2P = document.getElementById('text2P');
+        const text3 = document.getElementById('text3');
+        const text3P = document.getElementById('text3P');
+        if(text1 && text1P){
+            text1P.style.width = text1?.clientWidth + 'px';
+            text1P.style.height = text1?.clientHeight + 'px';
+        }
 
-    const [text2, count2] = useTypewriter({
-        words: ['Passionate Learner'],
-        loop: true,
-        delaySpeed: 4000,
-    })
+        if(text2 && text2P){
+            text2P.style.width = text2?.clientWidth + 'px';
+            text2P.style.height = text2?.clientHeight + 'px';
+        }
 
+        if(text3 && text3P){
+            text3P.style.width = text3?.clientWidth + 'px';
+            text3P.style.height = text3?.clientHeight + 'px';
+        }
     
-    const [text3, count3] = useTypewriter({
-        words: ['Drinker of Coffee'],
-        loop: true,
-        delaySpeed: 4000,
-    })
+    }, [])
 
   return (
-    <div className="relative h-screen" >
-        <div className='relative top-52 left-14 text-[17vw] pt-5 text-black z-10'>Nick Shryock
-                <h2  className='text-[var(--dark-gray)] font-extralight absolute top-0 text-[6vw]
-                animate-text-slide delay-3000'>Enthusiastic Developer</h2 >
-                <h2  className='text-[var(--dark-gray)] font-extralight rotate-[-90deg] text-[6vw] text-left 
-                absolute top-[48%] left-[-33%] animate-text-slide2 delay-[3s]'>Passionate Learner</h2 >
-                <h2 className='text-[var(--dark-gray)] font-extralight rotate-[180deg] absolute top-[95%] 
-                text-[6vw] animate-text-slide3'>Drinker of Coffee</h2 >
-                <h2 className='text-[var(--drak-gray)] font-extralight absolute top-0 text-[6vw]
-                hidden' aria-hidden="true" >Enthusiastic Developer</h2 >
+    <div className="relative h-screen box-border md:ml-[var(--md-nav-width)] lg:ml-[var(--lg-nav-width)]" >
+        <div className='relative top-52 pl-20 pt-5 z-10 md:top-96 md:pl-32'>
+            <p className=' text-[60px] text-black md:text-[90px]'>Nick</p>
+            <p className=' text-[60px] text-black md:text-[90px]'>Shryock</p>
+            <div id="text1P" className={`z-20 absolute top-0 overflow-hidden`}>
+                <h2 id="text1" className='text-[var(--dark-gray)] whitespace-nowrap font-extralight p-0 m-0 absolute 
+                top-0 text-[24px] animate-text-slide
+                md:text-[36px]'>Enthusiastic Developer</h2 >
+            </div>
+            <div id="text2P" className={`z-20 absolute top-[48%] left-[-45px] overflow-hidden rotate-[-90deg]
+            md:left-[-65px]`} >
+                <h2 id="text2" className='text-[var(--dark-gray)] whitespace-nowrap font-extralight 
+                text-[24px] text-left animate-text-slide2
+                md:text-[36px]'>Passionate Learner</h2 >
+            </div>
+            <div id="text3P" className={`z-20  absolute top-[95%] whitespace-nowrap  overflow-hidden`}>
+                <h2 id="text3" className='text-[var(--dark-gray)] font-extralight rotate-[180deg] text-[24px] 
+                animate-text-slide3
+                md:text-[36px]'>Drinker of Coffee</h2 >
+            </div>    
         </div>
         
-        <div className='overflow -skew-y-12 z-0 relative top-[-10%]'> 
-            <div className='w-full bg-[#ffeb85b9] h-[400px] md:h-[650px] -z-10 absolute top-[0%]' />
-            <img src={'/mountains.jpg'} className='w-full  h-[400px] md:h-[650px] -z-20 absolute top-[0%]' />
+        <div className='overflow -skew-y-12 z-0 relative -top-20 
+        md:-top-30'> 
+            <div className='w-full bg-[#ffeb85b9] h-[400px] -z-10 absolute top-[0%]
+            md:h-[650px] lg:h-[750px]' />
+            <img src={'/mountains.jpg'} className='w-full object-cover h-[400px] md:h-[650px] lg:h-[750px] -z-20 absolute top-[0%]' />
         </div>
     </div>
   )
