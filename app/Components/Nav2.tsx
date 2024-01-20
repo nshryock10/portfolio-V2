@@ -14,7 +14,7 @@ function Nav2({}: Props) {
 
   return (
     <header className='sticky top-0 flex z-20 '>
-        <div className='flex pt-10 mx-auto items-center'>
+        <div className='flex pt-5 mx-auto items-center'>
             <motion.div 
                 initial={{
                   x:-500,

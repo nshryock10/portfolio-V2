@@ -1,9 +1,11 @@
 "use client"
 
 import React from 'react'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { ChevronLeftIcon, ChevronRightIcon, UserIcon, 
+    CodeBracketIcon, DocumentTextIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion';
 import Background from './Background';
+import NavSquare from '../NavSquare';
 
 type Props = {}
 
@@ -11,6 +13,7 @@ function Hero2({}: Props) {
   return (
     <div className='h-screen flex items-center justify-center text-center w-full overflow-hidden'>
         <Background/>
+        <NavSquare />
         <div 
             className='relative p-0 text-[var(--dark-gray)]'
         >
@@ -52,7 +55,6 @@ function Hero2({}: Props) {
                 initial={{
                     x: -44,
                     y: -40,
-                    
                 }}
                 animate={{
                     x: 0,
@@ -62,8 +64,58 @@ function Hero2({}: Props) {
                     duration: 1.5
                 }}
             >
-                <ChevronRightIcon className=' rotate-[45deg] animate-pulse' />
+                <ChevronRightIcon className='rotate-[45deg] animate-pulse' />
             </motion.div>
+            <motion.div 
+                className='absolute -top-[100%] -left-[100%] md:-top-[150%] md:-left-[150%]'
+                initial={{opacity: 0, scale:0.5}}
+                animate={{opacity: 1, scale: 1}}
+                transition={{duration: 2, delay: 3}}
+            >
+                <div className='relative text-center w-[300px] h-[300px] md:w-[400px] md:h-[400px]'>
+                    <div className='group mx-auto pt-3 md:top-0'>
+                        <button className='bg-none border-none '>
+                            <UserIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                        </button>
+                        <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
+                            <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
+                            >About
+                            </motion.p>
+                        </div>
+                    </div>
+                    <div className='group absolute -right-[18%] md:-right-[20%] top-[50%]'>
+                        <button className='bg-none border-none '>
+                            <CodeBracketIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                        </button>
+                        <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
+                            <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
+                            >Projects
+                            </motion.p>
+                        </div>
+                    </div>
+                    <div className='group absolute -left-[21%] md:-left-[22%] top-[50%]'>
+                        <button className='bg-none border-none'>
+                            <DocumentTextIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                        </button>
+                        <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
+                            <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
+                            >Experience
+                            </motion.p>
+                        </div>
+                    </div>
+                    <div className='group absolute left-[32%] -bottom-[12%] md:-bottom-[12%]'>
+                        <button className='bg-none border-none '>
+                            <EnvelopeIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                        </button>
+                        <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
+                            <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
+                            >Contact
+                            </motion.p>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+            
         </div> 
     </div>
   )
