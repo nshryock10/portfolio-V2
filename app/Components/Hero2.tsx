@@ -7,9 +7,13 @@ import { motion } from 'framer-motion';
 import Background from './Background';
 import NavSquare from '../NavSquare';
 
-type Props = {}
+type Props = {
+    setPage: Function
+}
 
-function Hero2({}: Props) {
+function Hero2({setPage}: Props) {
+
+
   return (
     <div className='h-screen flex items-center justify-center text-center w-full overflow-hidden'>
         <Background/>
@@ -23,7 +27,7 @@ function Hero2({}: Props) {
                 opacity:0,
                 scale: 0.5
             }}
-            animate={{
+            whileInView={{
                 opacity:1,
                 scale: 1
             }}
@@ -31,6 +35,7 @@ function Hero2({}: Props) {
                 duration: 1.3,
                 delay: 1.5
             }}
+            viewport={{once: true}}
         >
             NS
         </motion.div>
@@ -52,17 +57,9 @@ function Hero2({}: Props) {
             </motion.div>
             <motion.div
                 className='w-[40px] h-[40px] absolute top-20 left-20'
-                initial={{
-                    x: -44,
-                    y: -40,
-                }}
-                animate={{
-                    x: 0,
-                    y:0
-                }}
-                transition={{
-                    duration: 1.5
-                }}
+                initial={{ x: -44,y: -40, }}
+                animate={{ x: 0, y:0 }}
+                transition={{ duration: 1.5 }}
             >
                 <ChevronRightIcon className='rotate-[45deg] animate-pulse' />
             </motion.div>
@@ -74,7 +71,10 @@ function Hero2({}: Props) {
             >
                 <div className='relative text-center w-[300px] h-[300px] md:w-[400px] md:h-[400px]'>
                     <div className='group mx-auto pt-3 md:top-0'>
-                        <button className='bg-none border-none '>
+                        <button 
+                            onClick={() => setPage('about')}
+                            className='bg-none border-none '
+                        >
                             <UserIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
                         </button>
                         <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
