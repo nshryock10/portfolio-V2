@@ -25,9 +25,20 @@ function About({setPage, transition}: Props) {
         <div className='flex flex-col justify-center space-y-5 items-center pt-3 
         md:space-y-10 lg:space-y-0 lg:space-x-20 lg:flex-row  md:pt-15 lg:pt-16'>
 
-            <img src={'/headshot.jpeg'} alt='headshot' 
-            className='w-[125px] h-[100%] md:w-auto md:h-[400px] rounded-full md:rounded-xl lg:rounded-md object-cover' />
-            <div className='flex flex-col items-center w-[85%] md:w-[70%] lg:w-[35%]'>
+            <motion.img src={'/headshot.jpeg'} alt='headshot' 
+            initial={{ x:-200, opacity:0}}
+            whileInView={{x:0, opacity: 1}}
+            transition={{duration: 1}}
+            viewport={{once: true}}
+            className='w-[195px] h-[100%] md:w-auto md:h-[400px] rounded-full md:rounded-xl lg:rounded-md object-cover' 
+            />
+            <motion.div
+                initial={{ x:300, opacity:0}}
+                whileInView={{x:0, opacity: 1}}
+                transition={{duration: 1}}
+                viewport={{once: true}}
+                className='flex flex-col items-center w-[85%] md:w-[70%] lg:w-[35%]'
+            >
                 <p className='w-full text-center md:text-left'
                 >Heres the short version: I started coding in 2017 where I was developing excel macros to analyze and display
                 data in a digestable way. That was the catalyst. From there I saw all the possibilities where this new skill
@@ -39,7 +50,7 @@ function About({setPage, transition}: Props) {
                 <span className='text-bold font-bold text-[var(--gold)]'> full stack development, UX/UI, and mobile application development.</span> 
                 <br/> <br/> I would love to connect about how I help you or your organization. </p>
                 <button className='bg-[var(--gold)] border-none rounded-md w-40 h-10 mt-5' >Connect</button>
-            </div>
+            </motion.div>
             {/* More */}
         </div>
         <Background2 />

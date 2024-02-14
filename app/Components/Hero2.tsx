@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link';
 import { ChevronLeftIcon, ChevronRightIcon, UserIcon, 
     CodeBracketIcon, DocumentTextIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion';
@@ -23,35 +24,18 @@ function Hero2({setPage}: Props) {
         >
         <motion.div
             className='text-[70px] font-thin'
-            initial={{
-                opacity:0,
-                scale: 0.5
-            }}
-            whileInView={{
-                opacity:1,
-                scale: 1
-            }}
-            transition={{
-                duration: 1.3,
-                delay: 1.5
-            }}
+            initial={{ opacity:0, scale: 0.5 }}
+            whileInView={{opacity:1, scale: 1 }}
+            transition={{duration: 1.3, delay: 1.5 }}
             viewport={{once: true}}
         >
             NS
         </motion.div>
             <motion.div
                 className='w-[40px] h-[40px]  absolute -top-3 right-20'
-                initial={{
-                    x: 48,
-                    y: 40,
-                }}
-                animate={{
-                    x:0,
-                    y:0
-                }}
-                transition={{
-                    duration: 1.5
-                }}
+                initial={{ x: 48,y: 40, }}
+                animate={{ x:0, y:0 }}
+                transition={{ duration: 1.5}}
             >
                 <ChevronLeftIcon className='rotate-[45deg]  animate-pulse' />
             </motion.div>
@@ -71,12 +55,11 @@ function Hero2({setPage}: Props) {
             >
                 <div className='relative text-center w-[300px] h-[300px] md:w-[400px] md:h-[400px]'>
                     <div className='group mx-auto pt-3 md:top-0'>
-                        <button 
-                            onClick={() => setPage('about')}
-                            className='bg-none border-none '
-                        >
-                            <UserIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
-                        </button>
+                        <Link href='#about'>
+                            <button onClick={() => setPage('about')} className='bg-none border-none '>
+                                <UserIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                            </button>
+                        </Link>
                         <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
                             <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
                             >About
@@ -84,9 +67,11 @@ function Hero2({setPage}: Props) {
                         </div>
                     </div>
                     <div className='group absolute -right-[18%] md:-right-[20%] top-[50%]'>
-                        <button className='bg-none border-none '>
-                            <CodeBracketIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
-                        </button>
+                        <Link href="#projects">
+                            <button onClick={() => setPage('projects')} className='bg-none border-none ' >
+                                <CodeBracketIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                            </button>
+                        </Link>
                         <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
                             <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
                             >Projects
@@ -94,9 +79,11 @@ function Hero2({setPage}: Props) {
                         </div>
                     </div>
                     <div className='group absolute -left-[21%] md:-left-[22%] top-[50%]'>
-                        <button className='bg-none border-none'>
-                            <DocumentTextIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
-                        </button>
+                        <Link href='#experience' >
+                            <button className='bg-none border-none'>
+                                <DocumentTextIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                            </button>
+                        </Link>
                         <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
                             <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
                             >Experience
@@ -104,9 +91,11 @@ function Hero2({setPage}: Props) {
                         </div>
                     </div>
                     <div className='group absolute left-[32%] -bottom-[12%] md:-bottom-[12%]'>
-                        <button className='bg-none border-none '>
-                            <EnvelopeIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
-                        </button>
+                        <Link href="#contact">
+                            <button className='bg-none border-none '>
+                                <EnvelopeIcon className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' />
+                            </button>
+                        </Link>
                         <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out'>
                             <motion.p className='uppercase font-thin tracking-[5px] md:tracking-[10px] mt-3'
                             >Contact

@@ -13,7 +13,7 @@ function Nav2({}: Props) {
 
 
   return (
-    <header className='sticky top-0 flex z-20 '>
+    <header className='sticky bg-white h-20 top-0 flex z-20 '>
         <div className='flex pt-5 mx-auto items-center'>
             <motion.div 
                 initial={{
