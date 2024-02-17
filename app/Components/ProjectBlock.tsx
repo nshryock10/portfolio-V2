@@ -35,11 +35,11 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
 
         const handleScroll = () => {
             const bottom = divRef.current?.getBoundingClientRect().bottom
-            console.log(bottom)
+            
             if(divRef.current) console.log(divRef.current.offsetHeight)
             if(divRef.current && bottom){
                 const opacityRatio = bottom / (divRef.current?.offsetHeight + navHeightOffSet);
-                console.log(opacityRatio)
+                
                 //if bottom  < height --> set to ratio (leaving page)
                 //if bottom < height --> set to inverse ratio (entering page)
                 if(bottom < divRef.current.offsetHeight){
@@ -67,9 +67,13 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
 
     if(blockHeight) { 
     return (
-        <div className='md:h-[50%] md:bg-gray-100 md:ml-56 md:my-14 md:flex md:flex-col md:justify-center md:items-center
+        <motion.div className='md:h-[50%] md:bg-gray-100 md:ml-56 md:my-14 md:flex md:flex-col md:justify-center md:items-center
         md:rounded-l-xl md:border-none md:shadow-lg' 
-        style={{height: blockHeight}}>
+        style={{height: blockHeight, opacity: elementOpacity}}
+            initial={{x: 2, scale: 0.75}}
+            whileInView={{x: 1, scale: 1}}
+            transition={{duration: 1.5}}
+        >
             <motion.div
                 style={{opacity: elementOpacity, height: screen.width < mdScreenBreak ? blockHeight : mdBlockHeight}}
                 ref={divRef}
@@ -107,7 +111,7 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
                 }   
             </div>
             
-        </div>
+        </motion.div>
         )
     } else{ return(<div>Loading...</div>)}
 }

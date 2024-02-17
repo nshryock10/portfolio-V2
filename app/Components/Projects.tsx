@@ -20,7 +20,7 @@ interface Projects {
 
     const navHeightOffSet = 173;
     const mdBlockHeight = 225;
-    const mdMargin = 40;
+    const mdMargin = 280;
     const mdScreenBreak = 765;
     const spacerDivHeight = screen.width > mdScreenBreak ? screen.height - navHeightOffSet - mdBlockHeight - mdMargin : 0;
 

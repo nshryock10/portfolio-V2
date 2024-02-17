@@ -14,7 +14,7 @@ function About({setPage, transition}: Props) {
     <motion.div 
         {...transition}
         className={`h-screen relative text-center w-full z-1 pt-20 overflow-auto pb-20
-        bg-gray-600 text-[var(--dark-gray)]`} >
+        bg-white text-[var(--dark-gray)]`} >
         <div className='flex items-center justify-between mx-6 md:mx-16 my-6' >
             <button className='bg-transparent border-none' onClick={() => setPage('home')}>
                 <ArrowLeftIcon className='w-8 h-8' />
@@ -53,7 +53,12 @@ function About({setPage, transition}: Props) {
             </motion.div>
             {/* More */}
         </div>
-        <Background2 />
+        <motion.div
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+        >
+            <Background2 />
+        </motion.div>
     </motion.div>
   )
 }
