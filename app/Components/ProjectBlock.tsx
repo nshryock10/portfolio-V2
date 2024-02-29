@@ -36,7 +36,6 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
         const handleScroll = () => {
             const bottom = divRef.current?.getBoundingClientRect().bottom
             
-            if(divRef.current) console.log(divRef.current.offsetHeight)
             if(divRef.current && bottom){
                 const opacityRatio = bottom / (divRef.current?.offsetHeight + navHeightOffSet);
                 
@@ -70,9 +69,7 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
         <motion.div className='md:h-[50%] md:bg-gray-100 md:ml-56 md:my-14 md:flex md:flex-col md:justify-center md:items-center
         md:rounded-l-xl md:border-none md:shadow-lg' 
         style={{height: blockHeight, opacity: elementOpacity}}
-            initial={{x: 2, scale: 0.75}}
-            whileInView={{x: 1, scale: 1}}
-            transition={{duration: 1.5}}
+            
         >
             <motion.div
                 style={{opacity: elementOpacity, height: screen.width < mdScreenBreak ? blockHeight : mdBlockHeight}}

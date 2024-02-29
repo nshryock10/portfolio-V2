@@ -16,21 +16,23 @@ interface Projects {
     title: string;
     description: string;
     skills: string[];
-}
+}   
 
     const navHeightOffSet = 173;
     const mdBlockHeight = 225;
     const mdMargin = 280;
     const mdScreenBreak = 765;
-    const spacerDivHeight = screen.width > mdScreenBreak ? screen.height - navHeightOffSet - mdBlockHeight - mdMargin : 0;
+    
 
 function Projects({setPage, transition}: Props){
 
     const [projects, setProjects] = useState<Projects[]>([])
+    const [spacerDivHeight, setSpacerDivHeight] = useState<number>(0)
     const parentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-
+        const spacerDivHeight = screen.width > mdScreenBreak ? screen.height - navHeightOffSet - mdBlockHeight - mdMargin : 0;
+        setSpacerDivHeight(spacerDivHeight)
         getProjectdData()
         
     }, [])
@@ -49,7 +51,7 @@ function Projects({setPage, transition}: Props){
         className={`h-screen bg-white relative text-center w-full z-1 pt-20 overflow-auto pb-20
         text-[var(--dark-gray)]`}
     >
-        <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-6 md:mx-0 my-6' >
+        <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-auto md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Projects</h1>
         </div>
         

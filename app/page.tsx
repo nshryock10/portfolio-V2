@@ -4,6 +4,7 @@ import Nav2 from './Components/Nav2'
 import Hero2 from './Components/Hero2'
 import About from './Components/About'
 import Projects from './Components/Projects'
+import Experience from './Components/Experience'
 import { useState, useRef, useEffect, use } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -29,29 +30,6 @@ export default function Home() {
   const parentRef = useRef<HTMLDivElement>(null);
   const childRef = useRef<any>(null);
   const [divBottom, setDivBottom] = useState<number>(0)
-/*
-  useEffect(() => {
-    const parent = parentRef.current;
-    const child = childRef.current;
-
-    if(!child || !parent){
-      console.log('missing ref', child, parent)
-      setDivBottom(0)
-    }
-
-    const handleScroll = () => {
-      console.log('we scrolling')  
-      const currentY = child?.getBoundingClientRect().bottom
-
-      console.log('Div Bottom', currentY)
-    }
-    console.log('adding that scroll event')
-    parent?.addEventListener('scroll', handleScroll)
-
-    return(() => { parent?.removeEventListener('scroll', handleScroll)})
-
-  }, [childRef, parentRef])
-*/
 
   return (
 
@@ -70,13 +48,15 @@ export default function Home() {
       <section id='projects' className='snap-center'>
         <Projects  parentRef={parentRef} setPage={setPage} transition={slideInFromRight} />
       </section>
-
-      
-      {/* Projects */}
       
       {/* Experience */}
+      <section id='experience' className='snap-center'>
+        <Experience  />
+      </section>
 
-      {/* Contact */}
+      <section id='contact' className='snap-center'>
+        <Contact  />
+      </section>
 
     </main>
   )

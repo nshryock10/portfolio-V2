@@ -12,15 +12,10 @@ function About({setPage, transition}: Props) {
 
   return (
     <motion.div 
-        {...transition}
         className={`h-screen relative text-center w-full z-1 pt-20 overflow-auto pb-20
         bg-white text-[var(--dark-gray)]`} >
-        <div className='flex items-center justify-between mx-6 md:mx-16 my-6' >
-            <button className='bg-transparent border-none' onClick={() => setPage('home')}>
-                <ArrowLeftIcon className='w-8 h-8' />
-            </button>
+        <div className='flex items-center justify-center mx-6 md:mx-16 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>About</h1>
-            <div className='w-6 h-8' ></div>
         </div>
         <div className='flex flex-col justify-center space-y-5 items-center pt-3 
         md:space-y-10 lg:space-y-0 lg:space-x-20 lg:flex-row  md:pt-15 lg:pt-16'>
@@ -53,11 +48,12 @@ function About({setPage, transition}: Props) {
             </motion.div>
             {/* More */}
         </div>
+        <Background2 />
         <motion.div
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
         >
-            <Background2 />
+           
         </motion.div>
     </motion.div>
   )
