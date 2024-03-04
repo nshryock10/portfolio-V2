@@ -16,21 +16,9 @@ function Nav2({}: Props) {
     <header className='sticky bg-white h-20 top-0 flex z-20 '>
         <div className='flex pt-5 mx-auto items-center'>
             <motion.div 
-                initial={{
-                  x:-500,
-                  opacity: 0,
-                  scale: 0.5  
-                }}
-                animate={{
-                    x:0,
-                    opacity: 1,
-                    scale: 1
-                }}
-                transition={{
-                    duration: 1,
-                    delay: 1.5
-                }}
-                
+                initial={{ x:-500, opacity: 0,scale: 0.5 }}
+                animate={{ x:0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1,delay: 1.5 }}  
             >
                 <SocialIcon 
                     url="https://instagram.com/nickshryock10"
@@ -41,20 +29,9 @@ function Nav2({}: Props) {
                 />
             </motion.div>
             <motion.div
-                initial={{
-                    y:-100,
-                    opacity: 0,
-                    scale: 0.5  
-                  }}
-                  animate={{
-                      y:0,
-                      opacity: 1,
-                      scale: 1
-                  }}
-                  transition={{
-                      duration: 1,
-                      delay: 1.5
-                  }}
+                initial={{ y:-100, opacity: 0, scale: 0.5 }}
+                  animate={{ y:0, opacity: 1, scale: 1}}
+                  transition={{ duration: 1, delay: 1.5 }}
             >
                 <SocialIcon 
                     url="https://www.linkedin.com/in/nickshryock"
@@ -64,20 +41,9 @@ function Nav2({}: Props) {
                 />
             </motion.div>
             <motion.div
-                initial={{
-                    x:500,
-                    opacity: 0,
-                    scale: 0.5  
-                  }}
-                  animate={{
-                      x:0,
-                      opacity: 1,
-                      scale: 1
-                  }}
-                  transition={{
-                      duration: 1,
-                      delay: 1.5
-                  }}
+                initial={{ x:500, opacity: 0, scale: 0.5}}
+                  animate={{ x:0, opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 1.5 }}
             >
                 <SocialIcon 
                     network="email"

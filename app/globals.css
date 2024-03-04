@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .contactInput {
+    @apply outline-none bg-slate-100  border-b border-slate-100 rounded-sm px-2 py-3 text-gray-400 placeholder-gray-300
+    transition-all focus:border-[var(--gold2)] focus:text-[var(--gold2)] hover:border-[var(--gold2)]
+  }
+}
+
 :root {
   --foreground-rgb: 50, 0, 0;
   --background-start-rgb: 214, 219, 220;

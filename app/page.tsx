@@ -1,10 +1,11 @@
 "use client"
 
-import Nav2 from './Components/Nav2'
-import Hero2 from './Components/Hero2'
-import About from './Components/About'
-import Projects from './Components/Projects'
-import Experience from './Components/Experience'
+import Nav2 from './Components/Nav2';
+import Hero2 from './Components/Hero2';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import Experience from './Components/Experience';
+import Contact from './Components/Contact';
 import { useState, useRef, useEffect, use } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
