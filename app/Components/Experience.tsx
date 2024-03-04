@@ -57,7 +57,7 @@ function Experience({}: Props) {
   return (
     <div className='h-screen relative overflow-auto text-[var(--dark-gray)] flex flex-col justify-between items-center pt-20
     text-center w-full snap-mandatory'>
-        
+        <Background3 />
         <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-6 md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Experience</h1>
         </div>
@@ -83,7 +83,7 @@ function Experience({}: Props) {
                     <ArrowRightIcon />
                 </motion.div>
             </div>
-            <Background3 />  
+          
     </div>
   )
 }

@@ -17,8 +17,8 @@ function Hero2({setPage}: Props) {
 
   return (
     <div className='h-screen flex items-center justify-center text-center w-full overflow-hidden bg-white -z-8'>
-        <Background/>
-        <NavSquare />
+      <Background />
+       {/* <NavSquare /> */}
         <div 
             className='relative p-0 text-[var(--dark-gray)]'
         >

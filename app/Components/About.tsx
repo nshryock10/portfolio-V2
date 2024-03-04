@@ -48,7 +48,7 @@ function About({setPage, transition}: Props) {
             </motion.div>
             {/* More */}
         </div>
-        <Background2 />
+       <Background2 />
         <motion.div
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
