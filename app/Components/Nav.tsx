@@ -8,8 +8,7 @@ import Home from '../page';
 
 type Props = {}
 
-export default function 
-({}: Props) {
+export default function Nav({}: Props) {
 
     const [isOpen, setIsOpen] = useState(false)
 
