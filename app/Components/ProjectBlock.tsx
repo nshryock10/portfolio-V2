@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef} from 'react'
+import Link from 'next/link';
 import { 
     motion, 
     useAnimation,
@@ -78,12 +79,12 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
                 className={`flex flex-col justify-around overflow-hidden items-center mx-5 mb-10 
                 md:flex-row md:mb-5`}
             >
-                <a href={link} target='_blank' className='h-[35%] max-w-[100%]'>
-                <img src={img} alt='project image' 
-                    className='h-[100%] max-w-[100%] aspect-square rounded-md object-cover
-                    md:h-[225px]' 
+                <Link href={link} target='_blank' className='h-[35%] max-w-[100%] aspect-square md:h-[225px]'> 
+                    <img src={img} alt='project image' 
+                        className='h-[100%] max-w-[100%] aspect-square rounded-md object-cover
+                        md:h-[225px] md:w-[100%]' 
                     />
-                </a>
+                </Link>
                 <div className='flex-col md:text-left md:ml-14'>
                     <h2  className='tracking-wide text-[24px] font-bold text-[dark-gray] md:mb-5'>{title}</h2>
                     <p className='text-[18px]'>{description}</p>
