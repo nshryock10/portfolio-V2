@@ -16,6 +16,7 @@ interface Projects {
     title: string;
     description: string;
     skills: string[];
+    link: string;
 }   
 
     const navHeightOffSet = 173;
@@ -49,7 +50,7 @@ function Projects({setPage, transition}: Props){
         ref={parentRef}
         id="project-container"
         className={`h-screen bg-white relative text-center w-full z-1 pt-20 overflow-auto pb-20
-        text-[var(--dark-gray)]`}
+        text-[var(--dark-gray)] scrollbar scrollbar-track-white`}
     >
         <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-auto md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Projects</h1>
@@ -65,6 +66,7 @@ function Projects({setPage, transition}: Props){
                             title={project.title}
                             description={project.description}
                             skills={project.skills}
+                            link={project.link}
                         />
                     )
                 })

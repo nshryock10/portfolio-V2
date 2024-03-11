@@ -6,8 +6,9 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Experience from './Components/Experience';
 import Contact from './Components/Contact';
-import { useState, useRef, useEffect, use } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useRef} from 'react';
+import Link from 'next/link';
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
 
 const slideinFromTop = {
   initial: {y: -1000, opacity: 0},
@@ -34,11 +35,12 @@ export default function Home() {
 
   return (
 
-    <main className="h-screen snap-y snap-mandatory relative overflow-scroll z-0">
+    <main className="h-screen snap-y snap-mandatory relative overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
+    scrollbar scrollbar-track-white scrollbar-thumb-[#ba9b03]">
       
       <Nav2 />
 
-      <section className='snap-center'>
+      <section id='hero' className='snap-center'>
         <Hero2 setPage={setPage}/>
       </section>
 
@@ -55,9 +57,19 @@ export default function Home() {
         <Experience  />
       </section>
 
-      <section id='contact' className='snap-center'>
+      <section id='contact' className='snap-center bg-white'>
         <Contact  />
       </section>
+
+      
+        <footer className='sticky bottom-20 w-full px-5 cursor-pointer'>
+          <div className='flex justify-end'>
+            <Link href='#hero'>
+              <ChevronUpIcon className='w-10 h-10 bg-gray-200 rounded-full p-1 text-gray-400 hover:bg-[var(--gold)]' />
+            </Link>
+          </div>
+        </footer>
+      
 
     </main>
   )

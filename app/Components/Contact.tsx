@@ -23,12 +23,12 @@ const Contact = (props: Props) => {
         &body=Hi my name is ${formData.name},\n ${formData.message}`
     }
   return (
-    <div className='h-screen bg-white -z-20 pt-20 box-border mx-5 flex flex-col items-center text-[var(--dark-gray)]
-    space-y-10'>
+    <div className='h-screen bg-white z-20 pt-20 box-border mx-5 flex flex-col items-center text-[var(--dark-gray)]
+    space-y-7'>
         <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-6 md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Contact</h1>
         </div>
-        <div className='w-full h-40 md:h-60 relative overflow-hidden text-center'>
+        <div className='w-full h-40 md:h-56 relative overflow-hidden text-center'>
             <img src={"/contact.jpg"} alt="contact" className='w-full h-auto overflow-hidden object-cover
             absolute md:-top-20' />
             <div className=' absolute top-0 w-full h-full bg-[var(--gold)] opacity-65' />
@@ -50,7 +50,7 @@ const Contact = (props: Props) => {
 
                 <textarea {...register('message')} className='contactInput' placeholder='Message' />
 
-                <button className='bg-[var(--gold)] py-3 rounded-sm' type='submit' >Submit</button>
+                <button className='bg-[var(--gold)] py-3 rounded-sm hover:shadow-md hover:shadow-[var(--gold2)] ' type='submit' >Submit</button>
                 
             </form>
         </div>

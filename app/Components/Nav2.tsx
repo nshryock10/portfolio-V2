@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion';
 
@@ -45,12 +46,15 @@ function Nav2({}: Props) {
                   animate={{ x:0, opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 1.5 }}
             >
-                <SocialIcon 
-                    network="email"
-                    fgColor='var(--dark-gray)'
-                    bgColor='transparent'
-                    style={iconDims}
-                />
+                <Link href='#contact'>
+
+                   <SocialIcon 
+                        network="email"
+                        fgColor='var(--dark-gray)'
+                        bgColor='transparent'
+                        style={iconDims}
+                    />
+                </Link>
             </motion.div>
         </div>
     </header>

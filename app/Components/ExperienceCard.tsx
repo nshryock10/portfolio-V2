@@ -13,6 +13,7 @@ function ExperienceCard({logo, company, title, dates, experience, skills}: Props
   return (
     <div className='flex flex-col mt-10 space-y-7 justify-center items-center w-[90%] text-center bg-gray-50 p-5 shadow-lg 
     shadow-slate-300 mb-4 md:w-[70%]'>
+        
         <img 
             className='w-28 h-28 mx-auto aspect-square rounded-full'
             src={logo} alt={company} 
@@ -22,6 +23,7 @@ function ExperienceCard({logo, company, title, dates, experience, skills}: Props
             <h4 className='font-bold' >{company}</h4>
         </div>
         <h4>{dates}</h4>
+        
         <div className='flex justify-center md:w-[90%] md:px-5' >
             <ul className='list-disc mx-auto'>
             {

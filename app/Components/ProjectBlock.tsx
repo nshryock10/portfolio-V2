@@ -12,9 +12,10 @@ type Props = {
     description: string;
     skills: string[];
     parentRef: React.RefObject<HTMLDivElement> | null;
+    link: string;
 }
 
-function ProjectBlock({img, title, description, skills, parentRef}: Props) {
+function ProjectBlock({img, title, description, skills, parentRef, link}: Props) {
 
     const [position, setPosition] = useState<number>(0)
     const [bottom, setBottom] = useState<number>(0)
@@ -77,11 +78,12 @@ function ProjectBlock({img, title, description, skills, parentRef}: Props) {
                 className={`flex flex-col justify-around overflow-hidden items-center mx-5 mb-10 
                 md:flex-row md:mb-5`}
             >
-                {/** IMG */}
+                <a href={link} target='_blank' className='h-[35%] max-w-[100%]'>
                 <img src={img} alt='project image' 
-                    className='h-[35%] max-w-[100%] aspect-square rounded-md object-cover
+                    className='h-[100%] max-w-[100%] aspect-square rounded-md object-cover
                     md:h-[225px]' 
                     />
+                </a>
                 <div className='flex-col md:text-left md:ml-14'>
                     <h2  className='tracking-wide text-[24px] font-bold text-[dark-gray] md:mb-5'>{title}</h2>
                     <p className='text-[18px]'>{description}</p>

@@ -4,7 +4,7 @@ type Props = {}
 
 const Background3 = (props: Props) => {
   return (
-    <div className='absolute w-[100%] top-[30%] bg-[var(--lightgold)] -skew-y-12 h-96 -z-10 md:h-[500px]'/>
+    <div className='w-[100%] top-[40%] bg-[var(--lightgold)] -skew-y-12 h-96 -z-10 md:h-[500px]'/>
 
   )
 }

@@ -5,7 +5,7 @@ type Props = {}
 
 const Background = (props: Props) => {
   return (
-    <div className='absolute top-0 -z-10'>
+    <div className='absolute top-0'>
         <motion.div 
             className='h-screen flex flex-col items-center justify-between mx-auto overflow-hidden z-8 rotate-[45deg]'
             initial={{scaleY: 0,rotate: 0}}
