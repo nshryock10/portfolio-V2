@@ -58,7 +58,8 @@ export const experienceData = () => {
         'Managed the planning and execution of process validations for complex assemblies, facing challenges such as the absence of proper process characterization prior to validation initiation due to accelerated project schedules, demonstrating adaptability and problem-solving skills.',
         'Determined the scope and deliverables for the Phase 1 program of the 2nd generation transcatheter tricuspid heart valve replacement system, incorporating optional deliverables based on lessons learned from the launch of the first generation program, showcasing strategic foresight and proactive planning.',
     'Evaluated supplier capabilities and performance to ensure alignment with project requirements, optimizing supplier relationships and driving continuous improvement in supplier development processes.'],
-        skills: ['process validations', 'project management', 'executive presentation', 'root cause analysis', 'stakeholder management']
+        skills: ['Six Sigma Black Belt','process validations', 'project management', 'executive presentation', 'root cause analysis',
+         'stakeholder management']
     },
     {
         logo: '/applied.png',
