@@ -36,16 +36,17 @@ function About({setPage, transition}: Props) {
                 className='flex flex-col items-center w-[85%] md:w-[70%] lg:w-[35%]'
             >
                 <p className='w-full text-center md:text-left'>
-                    Here&apos;s the short version: I began my coding journey in 2017, initially developing Excel macros to analyze and 
+                    {`Here's the short version: I began my coding journey in 2017, initially developing Excel macros to analyze and 
                     present data in a digestible format. This experience sparked my curiosity and opened my eyes to the vast 
                     possibilities of applying coding skills across various domains, from personal finance and fitness to daily habits 
                     and beyond. This realization led me to delve into web development, particularly front-end development, where I 
-                    obtained a certificate from Codecademy.com. <br/>
-                    What started as a curiosity quickly transformed into enthusiasm, and now I&apos;m fully committed to transitioning from 
-                    a hobbyist to a professional in the field. My journey isn&apos;t just about meeting obligations; it&apos;s about finding 
-                    enjoyment in the process. I&apos;m fueled by a relentless desire to learn and explore new avenues, including full-stack 
-                    development, UX/UI design, and mobile application development. <br/> <br/> I&apos;m eager to connect and discuss how I 
-                    can contribute to your projects or organization. 
+                    obtained a certificate from Codecademy.com.
+                    What started as a curiosity quickly transformed into enthusiasm, and now I'm fully committed to transitioning from 
+                    a hobbyist to a professional in the field. My journey isn't just about meeting obligations; it's about finding 
+                    enjoyment in the process. I'm fueled by a relentless desire to learn and explore new avenues, including full-stack 
+                    development, UX/UI design, and mobile application development. 
+                    
+                    I'm eager to connect and discuss how I can contribute to your projects or organization.`}
                 </p>
                 
                 <Link href="#contact">

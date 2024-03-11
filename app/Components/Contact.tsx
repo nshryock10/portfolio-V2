@@ -33,7 +33,7 @@ const Contact = (props: Props) => {
             absolute md:-top-20' />
             <div className=' absolute top-0 w-full h-full bg-[var(--gold)] opacity-65' />
             <h4 className='text-3xl text-center absolute top-[20%] md:top-[40%] md:left-[32%] text-white '>
-                Help me help you. Let&apos;s get in touch
+                {"Help me help you. Let's get in touch"}
             </h4>
         </div>
         <div className='flex flex-col justify-center items-center text-center mx-auto space-y-10 w-full'>
