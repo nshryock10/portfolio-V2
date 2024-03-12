@@ -5,7 +5,6 @@ import {
     useAnimation,
     useScroll
 } from 'framer-motion'
-import { handleClientScriptLoad } from 'next/script';
 
 type Props = {
     img: string;
@@ -27,11 +26,11 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
     const navHeightOffSet = 173;
     const mdScreenBreak = 765;
     const mdBlockHeight = 225;
-    let windowH = window.innerHeight - navHeightOffSet;
+    let windowH = screen.availHeight - navHeightOffSet;
     let blockHeight = screen.height - navHeightOffSet;
     if(screen.width < mdScreenBreak){
         blockHeight = screen.height - navHeightOffSet;
-        windowH = window.innerHeight - navHeightOffSet;
+        windowH = screen.availHeight - navHeightOffSet;
     }else{
         blockHeight = 375
     }
@@ -76,7 +75,7 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
             
         >
             <motion.div
-                style={{opacity: elementOpacity, height: screen.width < mdScreenBreak ? windowH : mdBlockHeight}}
+                style={{opacity: elementOpacity, height: screen.width < mdScreenBreak ? blockHeight : mdBlockHeight}}
                 ref={divRef}
                 className={`flex flex-col justify-around overflow-hidden items-center mx-5 mb-10 
                 md:flex-row md:mb-5`}

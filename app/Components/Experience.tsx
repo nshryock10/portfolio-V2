@@ -57,9 +57,8 @@ function Experience({}: Props) {
 
 
   return (
-    <div className=' relative overflow-auto text-[var(--dark-gray)] flex flex-col justify-between items-center pt-20
-    text-center w-full snap-mandatory scrollbar scrollbar-track-white'
-    style={{height: windowH}}>
+    <div className='h-[100dvh] relative overflow-auto text-[var(--dark-gray)] flex flex-col justify-between items-center pt-20
+    text-center w-full snap-mandatory scrollbar scrollbar-track-white'>
         
         <div className='fixed top-[35%] -z-10 right-0 w-full overflow-y-hidden'>
             <Background3 />

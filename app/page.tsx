@@ -35,12 +35,12 @@ export default function Home() {
 
   return (
 
-    <main className="h-screen snap-y snap-mandatory relative overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
+    <main className="h-[100dvh] relative snap-y snap-mandatory overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
     scrollbar scrollbar-track-white scrollbar-thumb-[#ba9b03]">
       
       <Nav2 />
 
-      <section id='hero' className='h-[100%] snap-center'>
+      <section id='hero' className='snap-center'>
         <Hero2 setPage={setPage}/>
       </section>
 
