@@ -40,24 +40,24 @@ export default function Home() {
       
       <Nav2 />
 
-      <section id='hero' className='snap-center'>
+      <section id='hero' className='h-[100%] snap-center'>
         <Hero2 setPage={setPage}/>
       </section>
 
-      <section id='about' className='snap-center'>
+      <section id='about' className=' snap-center'>
         <About setPage={setPage} transition={slideinFromTop} />
       </section>
 
-      <section id='projects' className='snap-center'>
+      <section id='projects' className='h-[100%] snap-center'>
         <Projects  parentRef={parentRef} setPage={setPage} transition={slideInFromRight} />
       </section>
       
       {/* Experience */}
-      <section id='experience' className='snap-center'>
+      <section id='experience' className='h-[100%] snap-center'>
         <Experience  />
       </section>
 
-      <section id='contact' className='snap-center bg-white'>
+      <section id='contact' className='h-[100%] snap-center bg-white'>
         <Contact  />
       </section>
 

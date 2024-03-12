@@ -23,6 +23,8 @@ function Experience({}: Props) {
     const [expIndex, setExpIndex] = useState<number>();
     const [isLoading, setIsLoading] = useState<boolean>();
 
+    let windowH = window.innerHeight;
+
     useEffect(() => {
         setIsLoading(true)
         getExperienceData();
@@ -55,8 +57,9 @@ function Experience({}: Props) {
 
 
   return (
-    <div className='h-screen relative overflow-auto text-[var(--dark-gray)] flex flex-col justify-between items-center pt-20
-    text-center w-full snap-mandatory scrollbar scrollbar-track-white'>
+    <div className=' relative overflow-auto text-[var(--dark-gray)] flex flex-col justify-between items-center pt-20
+    text-center w-full snap-mandatory scrollbar scrollbar-track-white'
+    style={{height: windowH}}>
         
         <div className='fixed top-[35%] -z-10 right-0 w-full overflow-y-hidden'>
             <Background3 />
