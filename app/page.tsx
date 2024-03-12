@@ -48,16 +48,16 @@ export default function Home() {
         <About setPage={setPage} transition={slideinFromTop} />
       </section>
 
-      <section id='projects' className='h-[100%] snap-center'>
+      <section id='projects' className='snap-center'>
         <Projects  parentRef={parentRef} setPage={setPage} transition={slideInFromRight} />
       </section>
       
       {/* Experience */}
-      <section id='experience' className='h-[100%] snap-center'>
+      <section id='experience' className='snap-center'>
         <Experience  />
       </section>
 
-      <section id='contact' className='h-[100%] snap-center bg-white'>
+      <section id='contact' className='snap-center bg-white'>
         <Contact  />
       </section>
 
