@@ -23,8 +23,6 @@ function Experience({}: Props) {
     const [expIndex, setExpIndex] = useState<number>();
     const [isLoading, setIsLoading] = useState<boolean>();
 
-    let windowH = window.innerHeight;
-
     useEffect(() => {
         setIsLoading(true)
         getExperienceData();
