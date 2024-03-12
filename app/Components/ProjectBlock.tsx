@@ -26,11 +26,9 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
     const navHeightOffSet = 173;
     const mdScreenBreak = 765;
     const mdBlockHeight = 225;
-    let windowH = screen.availHeight - navHeightOffSet;
     let blockHeight = screen.height - navHeightOffSet;
     if(screen.width < mdScreenBreak){
         blockHeight = screen.height - navHeightOffSet;
-        windowH = screen.availHeight - navHeightOffSet;
     }else{
         blockHeight = 375
     }
