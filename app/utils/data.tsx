@@ -40,7 +40,7 @@ export const experienceData = () => {
         logo: '/edwards.png',
         company: 'Edwards Lifesciences',
         title: 'Manager, Supplier Development Engineering',
-        dates: 'March 2020 - Present',
+        dates: 'March 2022 - Present',
         experience: ['Led the successful launch of the first-generation heart valve implant catheter device, ensuring a seamless transition with three months of product safety stock and critical suppliers ramping up capacity by 300% over 12 months prior to launch to meet increased product demands.',
     'Managed NPD teams focused on component development for the heart valve implant catheter providing comprehensive support across multiple programs, including functional unit testing, test plan creation, and manufacturing qualification',
     'Evaluated program risks by assessing their impact on project timelines, product quality, cost, supplier business continuity, and long-term scalability, culminating in proposals to executive leadership teams. Developed project charters detailing budgets totaling $3.3MM and multi-year project deliverables.',

@@ -14,6 +14,26 @@ type Props = {
 
 function Hero2({setPage}: Props) {
 
+    /*
+        <motion.div
+                className='w-[40px] h-[40px]  absolute -top-3 right-20'
+                initial={{ x: 48,y: 40, }}
+                animate={{ x:0, y:0 }}
+                transition={{ duration: 1.5}}
+            >
+                <ChevronLeftIcon className='rotate-[45deg]  animate-pulse' />
+            </motion.div>
+            <motion.div
+                className='w-[40px] h-[40px] absolute top-20 left-20'
+                initial={{ x: -44,y: -40, }}
+                animate={{ x: 0, y:0 }}
+                transition={{ duration: 1.5 }}
+            >
+                <ChevronRightIcon className='rotate-[45deg] animate-pulse' />
+            </motion.div>
+
+    */
+
 
   return (
     <div className='h-[100dvh] flex items-center justify-center text-center w-full overflow-hidden bg-white -z-8'>
@@ -32,20 +52,20 @@ function Hero2({setPage}: Props) {
             NS
         </motion.div>
             <motion.div
-                className='w-[40px] h-[40px]  absolute -top-3 right-20'
-                initial={{ x: 48,y: 40, }}
+                className='w-[40px] h-[40px]  absolute top-20 right-20'
+                initial={{ x: 52,y: -40, }}
                 animate={{ x:0, y:0 }}
                 transition={{ duration: 1.5}}
             >
-                <ChevronLeftIcon className='rotate-[45deg]  animate-pulse' />
+                <ChevronLeftIcon className='-rotate-[45deg]  animate-pulse' />
             </motion.div>
             <motion.div
-                className='w-[40px] h-[40px] absolute top-20 left-20'
-                initial={{ x: -44,y: -40, }}
-                animate={{ x: 0, y:0 }}
+                className='w-[40px] h-[40px] absolute -top-3 left-20'
+                initial={{ x: -40,y: 40, }}
+                animate={{ x:0, y:0 }}
                 transition={{ duration: 1.5 }}
             >
-                <ChevronRightIcon className='rotate-[45deg] animate-pulse' />
+                <ChevronRightIcon className='-rotate-[45deg] animate-pulse' />
             </motion.div>
             <motion.div 
                 className='absolute -top-[100%] -left-[100%] md:-top-[150%] md:-left-[150%]'
