@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
 
-    <main className="h-[100dvh] relative snap-y snap-mandatory overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
+    <main className="h-[100dvh] relative snap-y  overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
     scrollbar scrollbar-track-white scrollbar-thumb-[#ba9b03]">
       
       <Nav2 />

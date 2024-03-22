@@ -52,7 +52,7 @@ function Hero2({setPage}: Props) {
             NS
         </motion.div>
             <motion.div
-                className='w-[40px] h-[40px]  absolute top-20 right-20'
+                className='w-[40px] h-[40px] absolute top-20 right-20'
                 initial={{ x: 52,y: -40, }}
                 animate={{ x:0, y:0 }}
                 transition={{ duration: 1.5}}
