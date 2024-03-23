@@ -19,16 +19,16 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
 
     const [position, setPosition] = useState<number>(0)
     const [bottom, setBottom] = useState<number>(0)
-    const [elementOpacity, setElementOpacity] = useState<number>(1)
+    const [elementOpacity, setElementOpacity] = useState<number>(0.9)
 
     const divRef = useRef<HTMLDivElement>(null)
 
     const navHeightOffSet = 173;
     const mdScreenBreak = 765;
     const mdBlockHeight = 225;
-    let blockHeight = screen.height - navHeightOffSet;
+    let blockHeight = screen.availHeight - navHeightOffSet;
     if(screen.width < mdScreenBreak){
-        blockHeight = screen.height - navHeightOffSet;
+        blockHeight = screen.availHeight - navHeightOffSet;
     }else{
         blockHeight = 375
     }
