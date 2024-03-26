@@ -23,7 +23,7 @@ const Contact = (props: Props) => {
         &body=Hi my name is ${formData.name},\n ${formData.message}`
     }
   return (
-    <div className='h-screen bg-white z-20 pt-20 box-border mx-5 flex flex-col items-center text-[var(--dark-gray)]
+    <div className='h-screen bg-white z-20 pt-10 box-border mx-5 flex flex-col items-center text-[var(--dark-gray)]
     space-y-7'>
         <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-6 md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Contact</h1>

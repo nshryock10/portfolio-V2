@@ -49,10 +49,10 @@ function Projects({setPage, transition}: Props){
         {...transition}
         ref={parentRef}
         id="project-container"
-        className={`h-[100dvh] bg-white relative text-center w-full z-1 pt-20 overflow-auto pb-20
+        className={`h-[100dvh] bg-white relative text-center w-full z-1 pt-0 overflow-auto pb-20
         text-[var(--dark-gray)] scrollbar scrollbar-track-white`}
     >
-        <div className='flex sticky bg-white z-20 top-0 pt-5 w-full items-center justify-center mt-0 mx-auto md:mx-0 my-6' >
+        <div className='flex sticky bg-white z-20 top-0 pt-14 w-full items-center justify-center mt-0 mx-auto md:mx-0 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>Projects</h1>
         </div>
         

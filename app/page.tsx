@@ -6,7 +6,7 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Experience from './Components/Experience';
 import Contact from './Components/Contact';
-import { useState, useRef} from 'react';
+import { useState, useRef, useEffect} from 'react';
 import Link from 'next/link';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
 
@@ -33,9 +33,34 @@ export default function Home() {
   const childRef = useRef<any>(null);
   const [divBottom, setDivBottom] = useState<number>(0)
 
+  const [show, setShow] = useState<boolean>(true)
+    const [lastYScroll, setLastYScroll] = useState<number>(0)
+
+    const handleScroll = () => {
+
+        console.log(show)
+
+        if(window.scrollY > lastYScroll){
+            setShow(false)
+        }else{
+            setShow(true)
+        }
+
+        setLastYScroll(window.scrollY)
+    }
+
+    useEffect(() => {
+        
+        window.addEventListener('scroll', handleScroll)
+
+        return (() => window.removeEventListener('scroll', handleScroll))
+    
+    }, [lastYScroll])
+
+
   return (
 
-    <main className="h-[100dvh] snap-proximity relative snap-y  overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
+    <main className="h-[100dvh] snap-mandatory relative snap-y  overflow-scroll z-0 overflow-y-scroll overflow-x-hidden
     scrollbar scrollbar-track-white scrollbar-thumb-[#ba9b03]">
       
       <Nav2 />

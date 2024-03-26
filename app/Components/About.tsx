@@ -12,7 +12,7 @@ function About({setPage, transition}: Props) {
 
   return (
     <motion.div 
-        className={`h-screen relative text-center w-full z-1 pt-20 overflow-auto pb-20
+        className={`h-screen relative text-center w-full z-1 pt-10 overflow-auto pb-20
         bg-white text-[var(--dark-gray)] overflow-x-hidden scrollbar scrollbar-track-white`} >
         <Background2 />
         <div className='flex items-center justify-center mx-6 md:mx-16 my-6' >

@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion';
@@ -11,10 +11,11 @@ function Nav2({}: Props) {
 
     const iconWidth = 50;
     const iconDims = {width: `${iconWidth}px`, height: `${iconWidth}px`}
-
+    
 
   return (
-    <header className='sticky bg-white h-20 top-0 flex z-20 '>
+
+    <header className='absolute w-full bg-white h-20 top-0 flex z-20 items-center'>
         <div className='flex pt-5 mx-auto items-center'>
             <motion.div 
                 initial={{ x:-500, opacity: 0,scale: 0.5 }}
