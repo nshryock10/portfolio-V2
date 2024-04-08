@@ -5,28 +5,28 @@ export const projectData = () => {
         title: 'Memorizer App',
         description: 'An flashcard like web app that aids users in memorizing different texts. Once the user "flips" the card their answer is compared against the legend and scores the accuracy of their answer.',
         skills: ['React', 'Javascript', 'CSS', 'HTML', 'Express', 'Heorku', 'Psotgres SQL'],
-        link: 'https://memorizer-94a158ea50d7.herokuapp.com/'
+        link: ['https://github.com/nshryock10/memorizer','https://memorizer-94a158ea50d7.herokuapp.com/']
     },
     {
         img: '/fiit.png',
         title: 'F I I T app',
         description: 'An app that leverages the OpenAI API to create custom workouts based on user input inluding experience, equipment, and workout type',
         skills: ['React', 'Javascript', 'CSS', 'HTML', 'Express', 'Heorku', 'OpenAI API', 'Figma', 'WebSockets'],
-        link: 'https://app.tryfiit.com/'
+        link: ['https://github.com/nshryock10/aiworkout','https://app.tryfiit.com/']
     },
     {
         img: '/allinbets.png',
         title: 'Super Bowl Prop Bets',
         description: 'A web app for a prop bets game for Superbowl LVII. Users answered questions and paid through PayPal integration and were able to view their standing and scores against other players as the game progressed.',
         skills: ['React', 'Javascript', 'CSS', 'HTML', 'Express', 'Postgres SQL', 'PayPal API', 'Heroku'],
-        link:'https://github.com/nshryock10/allinbets'
+        link:['https://github.com/nshryock10/allinbets']
     },
     {
         img: '/reddlite.png',
         title: 'Redd Lite',
         description: 'Portfolio project for the Codecademy Front End Developer ceterificate that leveraged the Reddit API to create a lite version of the app that allows users to view different sub-reddits and comments from the website.',
         skills: ['React', 'Javascript', 'CSS', 'HTML', 'Reddit API', 'Netlify',],
-        link: 'https://nervous-ramanujan-45948d.netlify.app/'
+        link: ['https://github.com/nshryock10/react_redux_portfolio','https://nervous-ramanujan-45948d.netlify.app/']
     }]
 
     return data;

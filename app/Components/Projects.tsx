@@ -16,7 +16,7 @@ interface Projects {
     title: string;
     description: string;
     skills: string[];
-    link: string;
+    link: string[];
 }   
 
     const navHeightOffSet = 223;

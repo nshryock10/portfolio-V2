@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef} from 'react'
 import Link from 'next/link';
 import { 
     motion, 
-    useAnimation,
-    useScroll
 } from 'framer-motion'
+import { ArrowUpRight, Github } from 'react-bootstrap-icons';
 
 type Props = {
     img: string;
@@ -12,13 +11,11 @@ type Props = {
     description: string;
     skills: string[];
     parentRef: React.RefObject<HTMLDivElement> | null;
-    link: string;
+    link: string[];
 }
 
 function ProjectBlock({img, title, description, skills, parentRef, link}: Props) {
 
-    const [position, setPosition] = useState<number>(0)
-    const [bottom, setBottom] = useState<number>(0)
     const [elementOpacity, setElementOpacity] = useState<number>(1)
 
     const divRef = useRef<HTMLDivElement>(null)
@@ -78,14 +75,29 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
                 className={`flex flex-col justify-around overflow-hidden items-center mx-5 mb-10 
                 md:flex-row md:mb-5`}
             >
-                <Link href={link} target='_blank' className='h-[35%] max-w-[100%] aspect-square md:h-[225px]'> 
+                <Link href={link.length > 1 ? link[1] : link[0]} target='_blank' className='h-[35%] max-w-[100%] aspect-square md:h-[225px]'> 
                     <img src={img} alt='project image' 
                         className='h-[100%] max-w-[100%] aspect-square rounded-md object-cover
                         md:h-[225px] md:w-[100%]' 
                     />
                 </Link>
-                <div className='flex-col md:text-left md:ml-14'>
+                <div className='flex-col md:text-left md:ml-14 space-y-2'>
                     <h2  className='tracking-wide text-[24px] font-bold text-[dark-gray] md:mb-5'>{title}</h2>
+                    <div className='flex space-x-6 justify-center text-[var(--gold2)] md:justify-start '>
+                        <Link href={link[0]} target="_blank">
+                            <div className='flex space-x-1 hover:text-[var(--dark-gray)] group '>        
+                                <p className="">GitHub</p>
+                                <Github className='group-hover:translate-x-2 group-hover:scale-110' width={20} height={20} />
+                            </div>
+                        </Link>
+                        {link.length > 1 &&
+                        <Link href={link.length > 1 ? link[1] : link[0]} target="_blank" >
+                            <div className='flex space-x-1 hover:text-[var(--dark-gray)] group'>
+                                <p className="">Live Site</p>
+                                <ArrowUpRight className='group-hover:translate-x-2 group-hover:scale-110' width={20} height={20} />
+                            </div>
+                        </Link>}
+                    </div>
                     <p className='text-[18px]'>{description}</p>
                 </div>
                     <div className='flex flex-row justify-center items-start flex-wrap md:hidden' >
