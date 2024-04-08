@@ -19,7 +19,7 @@ interface Projects {
     link: string;
 }   
 
-    const navHeightOffSet = 173;
+    const navHeightOffSet = 223;
     const mdBlockHeight = 225;
     const mdMargin = 280;
     const mdScreenBreak = 765;

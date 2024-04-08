@@ -19,7 +19,7 @@ function ProjectBlock({img, title, description, skills, parentRef, link}: Props)
 
     const [position, setPosition] = useState<number>(0)
     const [bottom, setBottom] = useState<number>(0)
-    const [elementOpacity, setElementOpacity] = useState<number>(0.9)
+    const [elementOpacity, setElementOpacity] = useState<number>(1)
 
     const divRef = useRef<HTMLDivElement>(null)
 

@@ -12,10 +12,10 @@ function About({setPage, transition}: Props) {
 
   return (
     <motion.div 
-        className={`h-screen relative text-center w-full z-1 pt-10 overflow-auto pb-20
+        className={`h-screen relative text-center w-full z-1 pt-0 overflow-auto pb-20
         bg-white text-[var(--dark-gray)] overflow-x-hidden scrollbar scrollbar-track-white`} >
         <Background2 />
-        <div className='flex items-center justify-center mx-6 md:mx-16 my-6' >
+        <div className='flex sticky top-0 bg-white pt-14 mt-0 items-center justify-center mx-6 md:mx-16 my-6' >
             <h1 className='font-extralight uppercase tracking-[15px] text-[22px]'>About</h1>
         </div>
         <div className='flex flex-col justify-center space-y-5 items-center pt-3 

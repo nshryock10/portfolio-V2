@@ -47,7 +47,7 @@ function Nav2({}: Props) {
                   animate={{ x:0, opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 1.5 }}
             >
-                <Link href='#contact'>
+                
 
                    <SocialIcon 
                         network="email"
@@ -55,7 +55,7 @@ function Nav2({}: Props) {
                         bgColor='transparent'
                         style={iconDims}
                     />
-                </Link>
+                
             </motion.div>
         </div>
     </header>
