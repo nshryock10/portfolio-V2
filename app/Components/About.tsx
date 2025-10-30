@@ -36,16 +36,24 @@ function About({setPage, transition}: Props) {
                 className='flex flex-col items-center w-[85%] md:w-[70%] lg:w-[35%]'
             >
                 <p className='w-full text-center md:text-left'>
-                    {`Here's the short version: I began my coding journey in 2017, initially developing Excel macros to analyze and 
-                    present data in a digestible format. This experience sparked my curiosity and opened my eyes to the vast 
-                    possibilities of applying coding skills across various domains, from personal finance and fitness to daily habits 
-                    and beyond. This realization led me to delve into web development, particularly front-end development, where I 
-                    obtained a certificate from Codecademy.com.
-                    What started as a curiosity quickly transformed into enthusiasm, and now I'm fully committed to transitioning from 
-                    a hobbyist to a professional in the field. My journey isn't just about meeting obligations; it's about finding 
-                    enjoyment in the process. I'm fueled by a relentless desire to learn and explore new avenues, including full-stack 
-                    development, UX/UI design, and mobile application development. 
-                    
+                    {`What makes the best leaders in product development? Vision.
+                    \n\n
+                    By no means am I calling myself the best of the best in leading product development teams, but I have worked with a lot of 
+                    greats and the common thread I saw was that they all had a vision for how each team was contributing to the broader objective. 
+                    In my years of leading teams that has been the trait I have carried through in how I lead. I have a desire to make big impact and
+                    if you lose the vision when you're in the weeds it's easy to lose sight of where you're headed and miss the opportunity for that impact. 
+                    \n\n
+                    My 8 years of professional experience have all been in product development roles with the goal of launch complex medical devices that 
+                    will save and improve the lives of the patients that need help. Medical device development has required me to develop an expertise in learning
+                    how to collaborate with others and learn how to accomplish big objectives through a team. With long development cycles and many balls being
+                    juggled at the same time I have had to develop roadmaps to breakdown development into bite sized chunks and deliver results on a regular basis.
+                    Like all development projects, things change and I've become proficient at maintaining that vision to make sure these changes ultimately 
+                    help my teams in achieving that goal. 
+                    \n\n
+                    While my professional experience has been in medical device development, I have also developed an enthusiasm for learning how to solve everyday
+                    problems with software development. I learned front-end development through Codecademy.com and have been able to deploy several projects of growing
+                    complexity. Check out some of these projects to see how I am using this technical depth to aid in Product Management. 
+                    \n\n                    
                     I'm eager to connect and discuss how I can contribute to your projects or organization.`}
                 </p>
                 

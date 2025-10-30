@@ -120,7 +120,7 @@ function Hero2({setPage}: Props) {
                 viewport={{once: true}}
             >
                 <p className='text-lg uppercase font-light w-[75%] mx-auto md:w-full' >
-                    Software Developer and Product Enthusiast
+                    Product Manager and Web Developer
                 </p>
             </motion.div>
         </div>
