@@ -36,7 +36,7 @@ function About({setPage, transition}: Props) {
                 className='flex flex-col items-center w-[85%] md:w-[70%] lg:w-[35%]'
             >
                 <p className='w-full text-center md:text-left'>
-                    {`What makes the best leaders in product development? Vision.
+                    'What makes the best leaders in product development? Vision.
                     \n\n
                     By no means am I calling myself the best of the best in leading product development teams, but I have worked with a lot of 
                     greats and the common thread I saw was that they all had a vision for how each team was contributing to the broader objective. 
@@ -54,7 +54,7 @@ function About({setPage, transition}: Props) {
                     problems with software development. I learned front-end development through Codecademy.com and have been able to deploy several projects of growing
                     complexity. Check out some of these projects to see how I am using this technical depth to aid in Product Management. 
                     \n\n                    
-                    I'm eager to connect and discuss how I can contribute to your projects or organization.`}
+                    I'm eager to connect and discuss how I can contribute to your projects or organization.'
                 </p>
                 
                 <Link href="#contact">
